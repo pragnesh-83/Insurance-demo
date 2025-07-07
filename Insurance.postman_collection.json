@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "808e8fe8-d65c-4ab7-8100-dd423e737ac7",
+		"name": "Insurance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "46426930",
+		"_collection_link": "https://pragnesh-3331907.postman.co/workspace/Pragnesh's-Workspace~c46becc9-6f2d-4c63-801e-624eed687e03/collection/46426930-808e8fe8-d65c-4ab7-8100-dd423e737ac7?action=share&source=collection_link&creator=46426930"
+	},
+	"item": [
+		{
+			"name": "Create Policy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMSIsInVzZXJuYW1lIjoidGFuYXkiLCJpYXQiOjE3NTE3NDczNTUsImV4cCI6MTc1MTc0NzQ3NX0.hES6VOKqRy-4d-2tIrzyyIdjsMognQC2aBPECGSnmlQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productId\": \"ppp_001\",\n  \"customerName\": \"p patel2\",\n  \"startDate\": \"2025-06-06\",\n  \"endDate\": \"2026-06-05\",\n  \"premium\": \"A12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/policies/"
+			},
+			"response": [
+				{
+					"name": "GetPoliciesId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/policies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pol_002"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Update Policy",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMiIsInVzZXJuYW1lIjoidXNlcjAwMSIsImlhdCI6MTc1MTg1MzM0MSwiZXhwIjoxNzUxODUzOTQxfQ.iig3xoS57dh2L4jqccXweztvnfPVUObFj8UqD_2hY6c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productId\" : \"P001\",\n    \"customerName\" : \"Cust Update\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/policies/pol_11"
+			},
+			"response": [
+				{
+					"name": "GetPoliciesId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/policies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pol_002"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Delete Policy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVzZXJfMiIsInVzZXJuYW1lIjoidXNlcjAwMSIsImlhdCI6MTc1MTg1MzM0MSwiZXhwIjoxNzUxODUzOTQxfQ.iig3xoS57dh2L4jqccXweztvnfPVUObFj8UqD_2hY6c",
+						"type": "text"
+					}
+				],
+				"url": "http://localhost:3000/policies/pol_11"
+			},
+			"response": [
+				{
+					"name": "GetPoliciesId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/policies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pol_002"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Get Policy by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3000/policies/pol_002"
+			},
+			"response": [
+				{
+					"name": "GetPoliciesId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/policies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pol_002"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "Get Policy By CustomerName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/policies/?customerName=Alice Smith",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"policies",
+						""
+					],
+					"query": [
+						{
+							"key": "customerName",
+							"value": "Alice Smith"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetPoliciesId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/policies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pol_002"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"user001\",\n  \"password\": \"pass001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/register"
+			},
+			"response": [
+				{
+					"name": "GetPoliciesId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/policies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pol_002"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "User Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"user001\",\n  \"password\": \"pass001\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/user/token"
+			},
+			"response": [
+				{
+					"name": "GetPoliciesId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/policies/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"policies",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "pol_002"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}
