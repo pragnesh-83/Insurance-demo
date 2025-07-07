@@ -54,10 +54,10 @@ Import the postman collection and call the examples in the request api
 1. **GET `/api/policies/:id`**
    - Retrieves a single policy by its policy Id which also include the full product object.
    - Return below response status code and message
-   -   | Status code  | Message | | Description |
-      | ------------- | ------------- | ------------- |
-      | 200   |   | Retrun policy object along with product object  |
-      | 400  | Policy not found!  | if policy not found for procvided policy id  |
+   |  Status code |  Message   | Description |
+   |  -------------  |  -------------  |  -------------  |
+   |  200 |   |  Retrun policy object along with product object   |
+   |  400   |  Policy not found! |  if policy not found for procvided policy id  |
    - Sample return policy object
    ``` json
    {
