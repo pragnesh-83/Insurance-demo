@@ -62,24 +62,24 @@ Import the postman collection and call the examples in the request api
 
    - Sample return policy object
    ``` json
-   {
-      id: 'pol_001',
-      productId: 'prod_motor',
-      customerName: 'Alice Smith',
-      startDate: '2025-01-01',
-      endDate: '2026-01-01',
-      premium: 320,
-      status: 'active',
-      createdAt: '2025-01-01T12:00:00Z',
-      product: {
-        id: 'prod_motor',
-        name: 'Motor Insurance',
-        category: 'motor',
-        description: 'Covers damage and liability for cars and motorcycles.',
-        basePrice: 300,
-        createdAt: '2024-01-01T10:00:00Z',
-      },
-    }
+      {
+         "id": "pol_001",
+         "productId": "prod_motor",
+         "customerName": "Alice Smith",
+         "startDate": "2025-01-01",
+         "endDate": "2026-01-01",
+         "premium": 320,
+         "status": "active",
+         "createdAt": "2025-01-01T12:00:00Z",
+         "product": {
+            "id": "prod_motor",
+            "name": "Motor Insurance",
+            "category": "motor",
+            "description": "Covers damage and liability for cars and motorcycles.",
+            "basePrice": 300,
+            "createdAt": "2024-01-01T10:00:00Z",
+         },
+      }
    ```
 
 2. **GET `/api/policies?customerName=<name>`**
@@ -93,16 +93,16 @@ Import the postman collection and call the examples in the request api
 
    - Sample return policy object
    ``` json
-   {
-      id: 'pol_001',
-      productId: 'prod_motor',
-      customerName: 'Alice Smith',
-      startDate: '2025-01-01',
-      endDate: '2026-01-01',
-      premium: 320,
-      status: 'active',
-      createdAt: '2025-01-01T12:00:00Z',
-    }
+      {
+         "id": "pol_001",
+         "productId": "prod_motor",
+         "customerName": "Alice Smith",
+         "startDate": "2025-01-01",
+         "endDate": "2026-01-01",
+         "premium": 320,
+         "status": "active",
+         "createdAt": "2025-01-01T12:00:00Z",
+      }
    ```
 # Authenticated Endpoints (Requires API Key)
 1. **POST `/api/policies`**
@@ -121,26 +121,26 @@ Import the postman collection and call the examples in the request api
    - Sample input policy object
    ``` json
       {
-      "productId": "ppp_001",
-      "customerName": "p patel2",
-      "startDate": "2025-06-06",
-      "endDate": "2026-06-05",
-      "premium": 12
+         "productId": "ppp_001",
+         "customerName": "p patel2",
+         "startDate": "2025-06-06",
+         "endDate": "2026-06-05",
+         "premium": 12
       }
    ```
    - Sample return policy object
    ``` json
       {
-         id: 'pol_001',
-         productId: 'prod_motor',
-         customerName: 'Alice Smith',
-         startDate: '2025-01-01',
-         endDate: '2026-01-01',
-         premium: 320,
-         status: 'active',
-         createdAt: '2025-01-01T12:00:00Z',
+         "id": "pol_001",
+         "productId": "prod_motor",
+         "customerName": "Alice Smith",
+         "startDate": "2025-01-01",
+         "endDate": "2026-01-01",
+         "premium": 320,
+         "status": "active",
+         "createdAt": "2025-01-01T12:00:00Z",
       }
-   ```
+   ````
 
 2. **PUT `/api/policies/:id`**
    - Updates an existing policy by ID.
@@ -155,24 +155,24 @@ Import the postman collection and call the examples in the request api
    - Sample input policy object and one or more then one paramer which need to update
    ``` json
       {
-      "productId": "ppp_001",
-      "customerName": "p patel2",
-      "startDate": "2025-06-06",
-      "endDate": "2026-06-05",
-      "premium": 12
+         "productId": "ppp_001",
+         "customerName": "p patel2",
+         "startDate": "2025-06-06",
+         "endDate": "2026-06-05",
+         "premium": 12
       }
    ```
    - Sample return policy object
    ``` json
       {
-         id: 'pol_001',
-         productId: 'prod_motor',
-         customerName: 'Alice Smith',
-         startDate: '2025-01-01',
-         endDate: '2026-01-01',
-         premium: 320,
-         status: 'active',
-         createdAt: '2025-01-01T12:00:00Z',
+         "id": "pol_001",
+         "productId": "prod_motor",
+         "customerName": "Alice Smith",
+         "startDate": "2025-01-01",
+         "endDate": "2026-01-01",
+         "premium": 320,
+         "status": "active",
+         "createdAt": "2025-01-01T12:00:00Z",
       }
    ```
 3. **DELETE `/api/policies/:id`**
