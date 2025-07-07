@@ -54,10 +54,12 @@ Import the postman collection and call the examples in the request api
 1. **GET `/api/policies/:id`**
    - Retrieves a single policy by its policy Id which also include the full product object.
    - Return below response status code and message
-   |  Status code |  Message   | Description |
-   |  -------------  |  -------------  |  -------------  |
-   |  200 |   |  Retrun policy object along with product object   |
-   |  400   |  Policy not found! |  if policy not found for procvided policy id  |
+ 
+      |  Status code |  Message   | Description |
+      |  -------------  |  -------------  |  -------------  |
+      |  200 |   |  Retrun policy object along with product object   |
+      |  400   |  Policy not found! |  if policy not found for procvided policy id  |
+
    - Sample return policy object
    ``` json
    {
@@ -83,10 +85,12 @@ Import the postman collection and call the examples in the request api
 2. **GET `/api/policies?customerName=<name>`**
    - Retrieves all policies belonging to the specified customer name.
    - Return below response status code and message
-   -   | Status code  | Message | | Description |
+   
+      |  Status code |  Message  |  Description |
       | ------------- | ------------- | ------------- |
       | 200   |   | Retrun policy object as per below sample object  |
       | 404  | Policy not found!  | if policy not found for provided customer name  |
+
    - Sample return policy object
    ``` json
    {
@@ -105,13 +109,15 @@ Import the postman collection and call the examples in the request api
    - Creates a new policy.
    - Requires the authorization token (Need to generate with user/token api).
    - Return below response status code and message
-   -   | Status code  | Message | | Description |
+
+      | Status code  | Message | Description |
       | ------------- | ------------- | ------------- |
       | 201   |  Policy Object | provided as sample object below |
       | 400  | Product ID is required  | if productId is missing or blank   |
       | 400  | Customer name is required  | if custmerName is missing or blank   |
       | 400  | Premium is required  | if premium is missing or blank   |
       | 400  | Premium must be integer  | if premium is not provided as integer value   |
+
    - Sample input policy object
    ``` json
       {
@@ -140,10 +146,12 @@ Import the postman collection and call the examples in the request api
    - Updates an existing policy by ID.
    - Requires the authorization token (Need to generate with user/token api).
    - Return below response status code and message
-   -  | Status code  | Message | | Description |
+
+      | Status code  | Message | Description |
       | ------------- | ------------- | ------------- |
       | 200   |  Updated Policy Object | provided as sample object below |
       | 404  | Policy not found!  | if policy not found for provided policy ID  |
+
    - Sample input policy object and one or more then one paramer which need to update
    ``` json
       {
@@ -171,7 +179,8 @@ Import the postman collection and call the examples in the request api
    - Deletes a policy by ID.
    - Requires the authorization token (Need to generate with user/token api).
    - Return below response status code and message
-   -  | Status code  | Message | | Description |
+      
+      | Status code  | Message | Description |
       | ------------- | ------------- | ------------- |
       | 200   |  Policy deleted successfully |  |
       | 404  | Policy not found!  | if policy not found for provided policy ID  |
@@ -180,7 +189,8 @@ Import the postman collection and call the examples in the request api
 1. **POST `/user/register`**
    - Creates a new user in momery to generate dynamic token.
    - Return below response status code and message
-   -   | Status code  | Message | | Description |
+
+      | Status code  | Message | Description |
       | ------------- | ------------- | ------------- |
       | 201   |  User registered successfully | |
       | 400  | User already registered  |  |
@@ -198,7 +208,8 @@ Import the postman collection and call the examples in the request api
 2. **GET `user/token`**
    - Retrieves a authorization token for give user details. This token need to copy and paste into authorization header for create, update and delete policy.
    - Return below response status code and message
-   -   | Status code  | Message | | Description |
+
+      | Status code  | Message | Description |
       | ------------- | ------------- | ------------- |
       | 200   | token as object  |   |
       | 401  | Invalid credentials  | if provided password is not match with given user  |
