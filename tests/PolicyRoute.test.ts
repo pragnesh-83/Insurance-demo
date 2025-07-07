@@ -44,20 +44,6 @@ describe(' Policy API', () => {
     const SECRET_KEY = process.env.JWT_SECRET || 'dl_jwt_secret';;
     const mockUser = { userName: 'mockuser'};
     const token = 'Bearer '+Jwt.sign({ id: "U001", username: "mockuser" }, SECRET_KEY, { expiresIn: '10m' });
-    /*let req: Partial<Request>;
-    let res: Partial<Response>;
-    let next: Partial<NextFunction>;
-
-    beforeEach(() => {
-        req = {};
-        res = {
-            status: jest.fn().mockReturnThis(),
-            json: jest.fn(),
-        };
-        next ={};
-
-    });
-    */
 
     afterAll(done => {
         done()
